@@ -10,7 +10,9 @@ export default apiHandler()
   .use(
     Cors({
       // Only allow requests with GET, POST and OPTIONS
+      origin: '*',
       methods: ['GET', 'POST', 'OPTIONS'],
+      
     })
   )
   .get(async (req, res) => {
