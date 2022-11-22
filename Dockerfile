@@ -6,9 +6,10 @@ ARG DB_TYPE=sqlite
 ENV DB_TYPE=$DB_TYPE
 
 RUN apk add --no-cache python3 py3-pip make gcc g++
-
+RUN npm i -g pnpm
 COPY . /app
 
+COPY package.json pnpm-lock.yaml /app/
 COPY package.json yarn.lock /app/
 
 WORKDIR /app
