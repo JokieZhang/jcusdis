@@ -33,3 +33,4 @@ COPY . /app
 EXPOSE 3000/tcp
 
 CMD ["npm", "run", "start:with-migrate"]
+###
